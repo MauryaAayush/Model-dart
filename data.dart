@@ -114,7 +114,7 @@ List info = [
       "suite": "Apt. 950",
       "city": "South Christy",
       "zipcode": "23505-1337",
-      "geo": {"lat": "-71.4197", "lng": "71.7478"}
+      "geo": {"lat": "-71.4197", "lng": "71 .7478"}
     },
     "phone": "1-477-935-8478 x6430",
     "website": "ola.org",
