@@ -2,29 +2,38 @@ import 'model.dart';
 import 'data.dart';
 
 void main() {
-  DataModel dataModel;
+  List<DataModel> dataModels = info.map((i) => DataModel.fromJson(i)).toList();
 
-  for (int i = 0; i < info.length; i++) {
-    dataModel = DataModel.fromJson(info[i]);
-
-    print('-----------------------------');
+  dataModels.forEach((dataModel) {
+    print('______________________________');
+    print('______________________________');
     print('id: ${dataModel.id}');
     print('name: ${dataModel.name}');
     print('username: ${dataModel.username}');
     print('email: ${dataModel.email}');
-    print('address:');
-    print('\tstreet: ' + '${dataModel.address!.street}');
-    print('\tsuite: ' + '${dataModel.address!.suite}');
-    print('\tcity: ' + '${dataModel.address!.city}');
-    print('\tzipcode: ' + '${dataModel.address!.zipCode}');
-    print('\tgeo:');
-    print('\t\tlat: ' + '${dataModel.address!.geo!.lat}');
-    print('\t\tlng: ' + '${dataModel.address!.geo!.lng}');
+    print('address -> ');
+
+    if (dataModel.address != null) {
+      print('street: ${dataModel.address!.street}');
+      print('suite: ${dataModel.address!.suite}');
+      print('city: ${dataModel.address!.city}');
+      print('zipcode: ${dataModel.address!.zipCode}');
+      print('geo ->');
+
+      if (dataModel.address!.geo != null) {
+        print('lat: ${dataModel.address!.geo!.lat}');
+        print('lng: ${dataModel.address!.geo!.lng}');
+      }
+    }
+
     print('phone: ${dataModel.phone}');
     print('website: ${dataModel.website}');
-    print('company:');
-    print('\tname: ' + '${dataModel.company!.name}');
-    print('\tcatchPhrase: ' + '${dataModel.company!.catchPhrase}');
-    print('\tbs: ' + '${dataModel.company!.bs}');
-  }
+    print('company ->');
+
+    if (dataModel.company != null) {
+      print('name: ${dataModel.company!.name}');
+      print('catchPhrase: ${dataModel.company!.catchPhrase}');
+      print('bs: ${dataModel.company!.bs}');
+    }
+  });
 }
