@@ -9,15 +9,18 @@ class DataModel {
   String? phone;
   String? website;
 
-
   Company? company;
 
-
-  DataModel({this.id,this.address,this.company,this.email,this.name,this.phone,this.username,this.website});
-
- 
+  DataModel(
+      {this.id,
+      this.address,
+      this.company,
+      this.email,
+      this.name,
+      this.phone,
+      this.username,
+      this.website});
 }
-
 
 class Address {}
 
