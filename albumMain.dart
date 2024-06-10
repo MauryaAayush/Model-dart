@@ -2,6 +2,7 @@ import 'albumdata.dart';
 import 'albummodel.dart';
 
 void main() {
+  
   List<Albums> albumsList =
       albums.map((data) => Albums.fromJson(data)).toList();
 
