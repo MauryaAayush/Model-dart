@@ -7,11 +7,20 @@ class DataModel {
   Address? address;
 
   String? phone;
+  String? website;
 
-  Geo? geo;
+
+  Company? company;
+
+
+  DataModel({this.id,this.address,this.company,this.email,this.name,this.phone,this.username,this.website});
+
+ 
 }
+
 
 class Address {}
 
+class Geo {}
 
-class Geo{}
+class Company {}
