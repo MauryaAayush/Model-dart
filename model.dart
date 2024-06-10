@@ -61,8 +61,19 @@ class Geo {
   Geo({this.lat, this.lng});
 
   factory Geo.fromJson(Map json) {
-    return Geo(lat: json['lat'],lng: json['lng']);
+    return Geo(lat: json['lat'], lng: json['lng']);
   }
 }
 
-class Company {}
+class Company {
+  String? name;
+  String? catchPhrase;
+  String? bs;
+
+  Company({this.name, this.bs, this.catchPhrase});
+
+  factory Company.fromJson(Map json) {
+    return Company(
+        name: json['name'], catchPhrase: json['catchPhrase'], bs: json['bs']);
+  }
+}
