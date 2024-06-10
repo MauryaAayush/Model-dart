@@ -1,4 +1,7 @@
-void main()
-{
+import 'model.dart';
+
+void main() {
+  DataModel dataModel;
+
   
 }
