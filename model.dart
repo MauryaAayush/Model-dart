@@ -34,8 +34,35 @@ class DataModel {
   }
 }
 
-class Address {}
+class Address {
+  String? street;
+  String? suite;
+  String? city;
+  String? zipCode;
 
-class Geo {}
+  Geo? geo;
+
+  Address({this.city, this.geo, this.street, this.suite, this.zipCode});
+
+  factory Address.fromJson(Map json) {
+    return Address(
+        city: json['city'],
+        geo: json['geo'],
+        street: json['street'],
+        suite: json['json'],
+        zipCode: json['zipcode']);
+  }
+}
+
+class Geo {
+  String? lat;
+  String? lng;
+
+  Geo({this.lat, this.lng});
+
+  factory Geo.fromJson(Map json) {
+    return Geo(lat: json['lat'],lng: json['lng']);
+  }
+}
 
 class Company {}
