@@ -20,6 +20,18 @@ class DataModel {
       this.phone,
       this.username,
       this.website});
+
+  factory DataModel.fromJson(Map json) {
+    return DataModel(
+        id: json['id'],
+        name: json['name'],
+        email: json['email'],
+        address: json['address'],
+        company: json['company'],
+        phone: json['phone'],
+        username: json['username'],
+        website: json['website']);
+  }
 }
 
 class Address {}
