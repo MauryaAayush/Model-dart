@@ -97,7 +97,8 @@ void main() {
   List<DataModel> dataModels = info.map((i) => DataModel.fromJson(i)).toList();
 
   dataModels.forEach((dataModel) {
-    print('-----------------------------');
+    print('______________________________');
+    print('______________________________');
     print('id: ${dataModel.id}');
     print('name: ${dataModel.name}');
     print('username: ${dataModel.username}');
